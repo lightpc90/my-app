@@ -3,6 +3,8 @@ import styles from "../styles/Home.module.css";
 import Web3Modal from "web3modal";
 import { ethers, providers } from "ethers";
 import { useEffect, useRef, useState } from "react";
+import { Container, Spacer, Text, Image, Grid } from "@nextui-org/react";
+
 
 export default function Home() {
   // walletConnected keep track of whether the user's wallet is connected or not
@@ -109,23 +111,35 @@ export default function Home() {
         <meta name="description" content="ENS-Dapp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.main}>
+      <Spacer y={5}/>
+      <Grid.Container justify="center" gap={2}>
+        <Grid md={6}>
+          <Container>
+            <Text b>Welcome to 24Codelabz ENS lookup</Text>
+            <Spacer/>
+            
+            <Text>This is Etherum Name Service (ENS) lookup Dapp. Connect your wallet to check if your wallet is already mapped to an ENS. If not mapped, your wallet address will be displayed</Text>
+            <Spacer/>
+            <Text b>Connected wallet:</Text>
+            <Spacer/>
+            <Text color="secondary">{ens ? ens : address}</Text>
+            <Spacer/>
+            <div>
+              {renderButton()}
+            </div>          
+          </Container>
+        </Grid>
+        <Grid>
         <div>
-          <h1 className={styles.title}>
-            Welcome to LearnWeb3 Punks {ens ? ens : address}!
-          </h1>
-          <div className={styles.description}>
-            Its an NFT collection for LearnWeb3 Punks.
-          </div>
-          {renderButton()}
+          <Image width={400} height={400}  src="./_24codelabz .png" />
         </div>
-        <div>
-          <img className={styles.image} src="./learnweb3punks.png" />
-        </div>
-      </div>
-
+        </Grid>
+      </Grid.Container>
+      
+        
+        
       <footer className={styles.footer}>
-        Made with &#10084; by LearnWeb3 Punks
+        With &#10084; by 24Codelabz!
       </footer>
     </div>
   );
