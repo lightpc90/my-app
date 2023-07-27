@@ -131,7 +131,7 @@ export default function Home() {
         </Grid>
         <Grid>
         <div>
-          <Image width={400} height={400}  src="./_24codelabz .png" />
+          <Image width={400} height={400}  src="./_24codelabz.png" />
         </div>
         </Grid>
       </Grid.Container>
