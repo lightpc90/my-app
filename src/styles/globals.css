@@ -1,3 +1,4 @@
+/*
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -105,3 +106,70 @@ a {
     color-scheme: dark;
   }
 }
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply CSS Reset or Normalize.css (Choose one) */
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Normalize.css (CDN: https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css) */
+/* Uncomment the next line to use Normalize.css */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'); */
+
+/* Set Root Variables */
+:root {
+  --foreground-color: #000; /* Adjust as needed */
+  --background-start-color: #e3fcbb; 
+  /* 
+    --background-color-1: #767e04; 
+    --background-color-2: #4a3c72; 
+    --background-color-3: #332a88; 
+  */
+
+  --background-end-color: #a4babe; /* Adjust as needed */
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-color: #080808; /* Adjust as needed */
+    --background-start-color: #ddd3d3; /* Adjust as needed */
+    --background-end-color: #738b8d; /* Adjust as needed */
+  }
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground-color);
+  background: linear-gradient(to bottom, transparent, var(--background-end-color) var(--background-start-color));
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+}
+
+/* Additional Styles */
+/* Add any additional global styles here */
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+  /* Styles for devices with a maximum width of 768px */
+}
+
+/* Accessibility Styles (Example) */
+/* Add styles for focus states, contrast, etc. */
+
+/* Optimize Performance (Example) */
+/* Remove unused styles, minify the CSS, and consider using CSS variables for optimization. */
