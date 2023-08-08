@@ -80,7 +80,7 @@ export default function Home() {
       <div>Wallet connected</div>;
     } else {
       return (
-        <button onClick={connectWallet} className={styles.button}>
+        <button onPress={connectWallet} className={styles.button}>
           Connect your wallet
         </button>
       );
